@@ -1,3 +1,7 @@
+Before running the server install the dependencies
+```
+npm install
+```
 To run the server run the following int the terminal
 
 ```
