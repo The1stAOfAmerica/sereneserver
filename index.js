@@ -8,6 +8,10 @@ const ops = require('./operations.js');
 app.use(cors())
 app.use(express.json());
 
+app.get('/', function(req, res, next) {
+  res.json({});
+});
+
 app.get('/scores', function(req, res, next) {
     try {
       ops.getScores(db, req.query.userid, res);
@@ -28,5 +32,5 @@ app.post('/user', function(req, res, next) {
 
 
 app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}`);
+  console.log(`Go to Browser and try http://localhost:${port}`);
 });
